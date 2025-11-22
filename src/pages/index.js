@@ -1,12 +1,10 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import Head from 'next/head';
-// Corrected paths for your file structure
 import TodoForm from '../components/TodoForm'; 
 import TodoItem from '../components/TodoItem';
 import FilterTabs from '../components/FilterTabs';
 
-// Helper function to safely read from browser's localStorage
 const loadTodos = () => {
   if (typeof window !== 'undefined') {
     const storedTodos = localStorage.getItem('next-todo-list');
@@ -15,7 +13,6 @@ const loadTodos = () => {
   return [];
 };
 
-// Helper function to safely write to browser's localStorage
 const saveTodos = (todos) => {
   if (typeof window !== 'undefined') {
     localStorage.setItem('next-todo-list', JSON.stringify(todos));
@@ -109,7 +106,7 @@ export default function Home() {
         <title>Next.js Simple To-Do App</title>
       </Head>
 
-      <h1 style={{ textAlign: 'center', color: '#000000ff', marginBottom: '30px', borderBottom: '2px solid #e0e0e0', paddingBottom: '10px' }}>
+      <h1 style={{ textAlign: 'center', color: '#1a73e8', marginBottom: '30px', borderBottom: '2px solid #e0e0e0', paddingBottom: '10px' }}>
         Plan Better. Do More!
       </h1>
       
